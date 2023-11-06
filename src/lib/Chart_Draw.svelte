@@ -73,8 +73,8 @@
         padding: 20px;
     }
     .graph_sub_title {
-        font-size: 90px;
+        font-size: 80px;
         color: white;
-        line-height: 120%;
+        line-height: 100%;
     }
 </style>

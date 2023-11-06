@@ -1,10 +1,6 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/tauri";
   import Screen from "./lib/Screen1.svelte";
-  import Screen2 from "./lib/Screen2.svelte";
-  import Screen3 from "./lib/Screen3.svelte";
-  import Screen4 from "./lib/Screen4.svelte";
-  import Screen5 from "./lib/Screen5.svelte";
   import MessageScroll from "./lib/Message_Scroll.svelte";
   import type { ConfigStruct } from "./lib/myStruct";
 

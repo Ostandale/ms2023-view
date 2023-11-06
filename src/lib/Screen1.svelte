@@ -55,23 +55,6 @@
         width: 100%;
         height: 50%;
     }
-
-    .custom11 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        height: 100%;
-        padding: 20px auto;
-    }
-    .custom12 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-        height: 100%;
-        padding: 20px auto;
-    }
     .custom2 {
         display: flex;
         align-items: center;
