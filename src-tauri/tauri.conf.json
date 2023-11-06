@@ -35,9 +35,11 @@
     },
     "windows": [
       {
-        "fullscreen": true,
+        "fullscreen": false,
         "resizable": true,
-        "title": "ms2023-view"
+        "title": "ms2023-view",
+        "width": 800,
+        "height": 600
       }
     ]
   }
