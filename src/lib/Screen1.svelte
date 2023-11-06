@@ -18,7 +18,12 @@
 
 <div class="screen1_custom1">
     <div class="title">
-        製品名：{targetValue.product_name}　月次生産目標：{targetValue.monthly_target}　日次生産目標：{targetValue.daily_target}
+        <div>
+            製品名：{targetValue.product_name}
+        </div>
+        <div>
+            月次生産目標：{targetValue.monthly_target}　日次生産目標：{targetValue.daily_target}
+        </div>
     </div>
     <div class="custom1">
         <Chart
@@ -77,13 +82,16 @@
     }
     .title {
         width: 95%;
-        height: 95%;
+        height: 220%;
         background-color: #202060;
         border: 1px solid white;
         border-radius: 20px;
         margin: 10px auto;
         padding: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        font-size: 90px;
+        line-height: 120%;
     }
 </style>

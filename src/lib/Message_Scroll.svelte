@@ -80,11 +80,13 @@
 <style>
     .message-container {
         padding: auto;
-        font-size: 24px;
+        font-size: 80px;
         position: fixed;
         bottom: 0;
         left: 0;
         white-space: nowrap;
         overflow: hidden;
+        line-height: 110%;
+        background-color: rgba(80, 80, 80, 0.5);
     }
 </style>

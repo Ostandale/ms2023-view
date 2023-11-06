@@ -48,9 +48,13 @@
 <div class="graph">
     {#if data}
         {#if props2 == "normal"}
-            日次生産高　　日次目標：{target.daily_target}
+            <div class="graph_sub_title">
+                日次生産高　　日次目標：{target.daily_target}
+            </div>
         {:else if props2 == "total"}
-            日次生産高　積算　　月次目標：{target.monthly_target}
+            <div class="graph_sub_title">
+                日次生産高　積算　　月次目標：{target.monthly_target}
+            </div>
         {/if}
         <ComboChart {data} {options} style="padding:1px;" />
     {:else}
@@ -67,5 +71,10 @@
         border-radius: 20px;
         margin: 10px auto;
         padding: 20px;
+    }
+    .graph_sub_title {
+        font-size: 90px;
+        color: white;
+        line-height: 120%;
     }
 </style>

@@ -49,7 +49,7 @@ pub async fn convert_data(
         let value = fetch_data[index].parse::<i32>().unwrap();
         let daily_target = fetch_target[1].parse::<i32>().unwrap();
         let monthly_target = fetch_target[0].parse::<i32>().unwrap();
-        let date = format!("{}\n{}", label, value);
+        let date = format!("{}　{}", label, value);
 
         let data = MyData1 {
             group: "product".to_string(),

@@ -1,6 +1,6 @@
 use std::time::{SystemTime, UNIX_EPOCH};
 
-use crate::config::DATA_REFRESH_INTERVAL;
+use crate::config::{DATA_FETCH_INTERVAL, DATA_FETCH_TIMING};
 use crate::fetch_convert_output::process_and_output_data::process_and_output_data;
 use crate::struct_data::FetchSpreadSheetConfig;
 
@@ -47,9 +47,11 @@ pub async fn convert_to_chart_data(sheet: Sheets<HttpsConnector<HttpConnector>>)
                     }
                 }
             }
+
+            tokio::time::sleep(std::time::Duration::from_secs(DATA_FETCH_INTERVAL)).await;
         }
 
         //  データ監視間隔
-        tokio::time::sleep(std::time::Duration::from_secs(DATA_REFRESH_INTERVAL)).await;
+        tokio::time::sleep(std::time::Duration::from_secs(DATA_FETCH_TIMING)).await;
     }
 }
