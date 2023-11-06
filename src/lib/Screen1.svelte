@@ -12,7 +12,6 @@
 
     function fetchTargetValue(event: any) {
         targetValue = event.detail.value;
-        console.log(targetValue);
     }
 </script>
 

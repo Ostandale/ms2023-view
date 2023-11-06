@@ -39,7 +39,7 @@ async fn main() {
     let (auth, client) = match auth(root_path).await {
         Ok((v1, v2)) => (v1, v2),
         Err(e) => {
-            eprint!("認証失敗エラー発生{}", e);
+            eprintln!("認証失敗エラー発生{}", e);
             panic!();
         }
     };
