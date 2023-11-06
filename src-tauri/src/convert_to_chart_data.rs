@@ -28,12 +28,14 @@ pub async fn convert_to_chart_data(sheet: Sheets<HttpsConnector<HttpConnector>>)
         //  更新時間が指定したリフレッシュ時間を超えていたら、データを取得、変換、出力する
         for (last_update_time, config) in last_update.iter_mut().zip(spreadsheet_config.iter()) {
             //  更新条件
-            //
+            //  初回（初期値０）
+            //  又はconfig.update_intervalが-1ではない　＆　更新間隔を過ぎている　＆　初回ではない
             let should_update = *last_update_time == 0
                 || (*last_update_time > 0
                     && config.update_interval != -1
                     && (*last_update_time + config.update_interval as u64) < epoch_time);
 
+            //  更新条件に当てはまっていれば、グラフ元データの取得、変換、グラフ用データの出力を行う
             if should_update {
                 *last_update_time = epoch_time;
                 let result = process_and_output_data(&sheet, config).await;
